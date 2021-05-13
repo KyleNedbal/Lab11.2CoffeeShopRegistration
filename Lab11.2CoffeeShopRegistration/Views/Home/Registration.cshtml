@@ -1,0 +1,63 @@
+﻿<style>
+
+    input[type=number] {
+        width: 100%;
+        padding: .9rem 1.25rem;
+        margin: .75rem 0;
+        box-sizing: border-box;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: .9rem 1.25rem;
+        margin: .75rem 0;
+        box-sizing: border-box;
+    }
+
+    input[type=password] {
+        width: 100%;
+        padding: .9rem 1.25rem;
+        margin: .75rem 0;
+        box-sizing: border-box;
+    }
+    input[type=email] {
+        width: 100%;
+        padding: .9rem 1.25rem;
+        margin: .75rem 0;
+        box-sizing: border-box;
+    }
+
+</style>
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<link rel="stylesheet" href="~/css/Styles.css" type="text/css" />
+
+<h3 style="text-align:center">Please fill out the form to register</h3>
+
+<form method="post" action="/Result" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+
+    <label for="firstName">First Name</label>
+    <input required type="text" id="firstName" name="firstName">
+
+    <label for="lastName">Last Name</label>
+    <input required type="text" id="lastName" name="lastName">
+
+    <label for="email">Email</label>
+    <input required type="email" id="email" name="email">
+
+    <label for="phoneNumber">Phone Number</label>
+    <input required type="text" id="phoneNumber" name="phoneNumber" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="###-###-####">
+
+    <label for="age">Age</label>
+    <input required type="number" id="age" name="age" min="18" max="99" value="21" />
+
+    <label for="password">Password</label>
+    <input required type="password" id="password" name="password" pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$" placeholder="Minimum eight characters, at least one letter and one number">
+
+    <label for="password">Password</label>
+    <input required type="password" id="confirmPassword" name="confirmPassword" pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$" placeholder="Re-enter password">
+
+    <input type="submit" />
+
+</form>

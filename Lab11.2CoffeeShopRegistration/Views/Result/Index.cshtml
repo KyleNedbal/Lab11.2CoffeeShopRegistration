@@ -1,0 +1,21 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Result";
+}
+
+<link rel="stylesheet" href="~/css/Styles.css" type="text/css" />
+
+<div class="text-center">
+    <h1>Welcome @Model.firstName @Model.lastName</h1>
+</div>
+<div class="text-center">
+    <h2>You have successfully registered to our newsletter using @Model.email</h2>
+</div>
+<div class="text-center">
+    <p><a href="result/profile">Click Here</a> to view your profile information!</p>
+</div>
+
+<div>
+    <img src="~/images/retro-waitress-serving-coffee-clipart_3890-606.jpg" />
+</div>
+
